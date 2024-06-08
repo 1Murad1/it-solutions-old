@@ -1,0 +1,46 @@
+.mobile-menu {
+	position: fixed;
+	opacity: 0;
+	z-index: -100;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	transition: 0.5s all;
+	align-items: stretch;
+	justify-content: flex-end;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+	&.active {
+		opacity: 1;
+		z-index: 200;
+		.wrapper-menu {
+			transform: translateX(0);
+		}
+	}
+	.wrapper-menu {
+		background-color: $green;
+		padding: 100px 40px 30px;
+		width: max-content;
+		transition: 0.5s all;
+		transform: translateX(100%);
+		z-index: 200;
+		position: relative;
+		.close-icon {
+			position: absolute;
+			right: 10px;
+			top: 20px;
+		}
+		.nav-menu {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			li {
+				text-align: center;
+				.linkMenu {
+					color: $white;
+				}
+			}
+		}
+	}
+}

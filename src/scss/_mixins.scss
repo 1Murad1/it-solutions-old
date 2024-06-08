@@ -1,0 +1,96 @@
+//fonts
+$RobotoRegular: RobotoRegular, sans-serif;
+$RobotoBold: RobotoBold, sans-serif;
+
+//titles
+
+@mixin titleH1 {
+	font-size: 52px;
+	line-height: 60.94px;
+	color: $lightYellow;
+	font-family: $RobotoBold;
+	text-align: center;
+	@media screen and (max-width: $tablet) {
+		font-size: 44px;
+		line-height: 52.94px;
+	}
+	@media screen and (max-width: $mobile) {
+		font-size: 36px;
+		line-height: 44.94px;
+	}
+}
+
+@mixin titleH2 {
+	font-size: 52px;
+	line-height: 60.94px;
+	font-family: $RobotoBold;
+	text-align: center;
+	@media screen and (max-width: $mobile) {
+		font-size: 36px;
+		line-height: 44.94px;
+	}
+}
+
+@mixin titleH3 {
+	font-size: 33px;
+	line-height: 38.67px;
+	color: $darkBrown;
+	font-family: $RobotoBold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@mixin titleH4 {
+	font-size: 22px;
+	line-height: 25.78px;
+	color: $white;
+	font-family: $RobotoBold;
+	text-align: center;
+}
+
+//links
+
+@mixin linkMenu {
+	font-size: 20px;
+	line-height: 23.44px;
+	font-family: $RobotoBold;
+	text-transform: uppercase;
+	color: $brown;
+	transition: 0.5s all;
+	text-decoration: underline;
+	&:hover {
+		color: $darkBrown;
+	}
+}
+
+//buttons
+
+@mixin buttonForm {
+	font-family: $RobotoBold;
+	font-size: 30px;
+	line-height: 35.16px;
+	color: $white;
+	border-radius: 50px;
+	position: relative;
+	z-index: 5;
+	background-color: $green;
+	text-transform: uppercase;
+	transition: 0.5s all;
+	padding: 7px 10px;
+	&:hover {
+		background-color: $darkGreen;
+	}
+}
+
+//inputs
+
+@mixin input {
+	padding: 16px 20px 15px 58px;
+	border-radius: 50px;
+	width: 100%;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	line-height: 18.75px;
+	color: $darkGrey;
+}

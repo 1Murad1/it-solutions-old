@@ -1,0 +1,33 @@
+//colors
+$white: #ffffff;
+$black: #444444;
+$lightBrown: #6b6b6b;
+$brown: #715d00;
+$darkBrown: #483c08;
+$lightYellow: #f9e994;
+$yellow: #f6e791;
+$lactic: #f6f7e4;
+$green: #a1d337;
+$darkGreen: #537d13;
+$lightGrey: #dfe4de;
+$grey: #f3efef;
+$darkGrey: #777777;
+$lightPink: #f6be91;
+$blue: #7fb3e1;
+$bgGradient: linear-gradient(
+	180deg,
+	#e1edf8 0%,
+	rgba(127, 179, 225, 0) 59.37%,
+	rgba(0, 0, 0, 0.25) 100%
+);
+$textGradient: linear-gradient(
+	180deg,
+	#f9e994 0%,
+	#537d13 56.25%,
+	#483c08 100%
+);
+
+//screens
+$laptop: 1200px;
+$tablet: 768px;
+$mobile: 480px;

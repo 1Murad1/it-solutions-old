@@ -1,1 +1,1026 @@
 @import 'common-styles';
+
+#main {
+	.section-home {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding-top: 114px;
+		background-image: url('../img/main-banner.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 60px;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			background-image: url('../img/triangle.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 90%;
+			width: 60%;
+		}
+		.container {
+			position: relative;
+			z-index: 5;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 50px;
+			.left-block {
+				flex: 1;
+				.socials {
+					margin-bottom: 26px;
+				}
+				.titleh1 {
+					margin-bottom: 10px;
+				}
+				.text {
+					width: 560px;
+					margin-bottom: 38px;
+				}
+				.buttons {
+					display: flex;
+					align-items: center;
+					gap: 30px;
+				}
+			}
+			.right-block {
+				width: 660px;
+				display: flex;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.section-services {
+		background-color: $darkBlue;
+		padding: 64px 0 90px;
+		.container {
+			.section-title {
+				margin-bottom: 60px;
+			}
+			.sub-title {
+				width: 560px;
+				margin-bottom: 7px;
+			}
+			.service-carts {
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+				flex-flow: row wrap;
+				gap: 22px;
+				.service-cart {
+					width: calc(33.33% - 15px);
+					border: 1px solid $blue;
+					border-radius: 12px;
+					padding: 36px 23px 23px;
+					display: flex;
+					flex-direction: column;
+					.service-icon {
+						margin-bottom: 22px;
+						svg {
+							path {
+								transition: 0.5s all;
+							}
+						}
+					}
+					.titleh4 {
+						margin-bottom: 17px;
+					}
+					.description {
+						color: $secondaryTextColor;
+						margin-bottom: 33px;
+						transition: 0.5s all;
+					}
+					.read-more {
+						margin-top: auto;
+					}
+					&:hover {
+						border: 1px solid $accentColor;
+						background-color: $accentColor;
+						.service-icon {
+							svg {
+								path {
+									fill: $white;
+								}
+							}
+						}
+						.description {
+							color: $white;
+						}
+						.read-more {
+							color: $white;
+							svg {
+								path {
+									stroke: $white;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.section-about-us {
+		padding: 90px 0;
+		background-color: $darkBlue;
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px;
+			.left-block {
+				width: 704px;
+				position: relative;
+				.ceo-founder {
+					position: absolute;
+					right: 0;
+					bottom: -40px;
+					.ceo-founder-text {
+						color: $accentColor;
+						text-align: center;
+						position: relative;
+						top: -15px;
+					}
+				}
+				.section-title {
+					margin-bottom: 30px;
+				}
+				.sub-title {
+					margin-bottom: 85px;
+					width: 560px;
+				}
+				.founder-items {
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					flex-flow: row wrap;
+					gap: 85px 15px;
+					margin-bottom: 85px;
+					.item {
+						width: 343px;
+						display: flex;
+						align-items: flex-start;
+						gap: 18px;
+						&:hover {
+							.box-icon {
+								background-color: rgba(9, 175, 244, 1);
+								svg {
+									path {
+										fill: $white;
+									}
+								}
+							}
+						}
+						.box-icon {
+							width: 56px;
+							position: relative;
+							top: 8px;
+							border-radius: 6px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							transition: 0.5s all;
+							height: 56px;
+							background-color: rgba(9, 175, 244, 0.15);
+							svg {
+								path {
+									transition: 0.5s all;
+								}
+							}
+						}
+						.descr-block {
+							flex: 1;
+						}
+					}
+				}
+			}
+			.right-block {
+				flex: 1;
+				display: block;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.section-why-choose-us {
+		padding: 90px 0 165px;
+		background-color: $darkBlue;
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 35px;
+			.left-block {
+				display: flex;
+				width: 646px;
+				img {
+					width: 100%;
+				}
+			}
+			.right-block {
+				flex: 1;
+				.section-title {
+					margin-bottom: 30px;
+				}
+				.sub-title {
+					width: 560px;
+					margin-bottom: 55px;
+				}
+				.row-item {
+					margin-bottom: 55px;
+					display: flex;
+					align-items: flex-start;
+					gap: 24px;
+					.titleh2 {
+						color: $accentColor;
+						width: 102px;
+					}
+					.deskr-block {
+						flex: 1;
+					}
+				}
+			}
+		}
+	}
+	.section-experience {
+		background-image: url('../img/pattern-bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 90px 0;
+		.container {
+			display: flex;
+			align-items: stretch;
+			gap: 23px;
+			.experience-cart {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				flex: 1;
+				padding: 32px 20px 20px;
+				border: 1px solid $accentColor;
+				border-top: 6px solid $accentColor;
+				border-radius: 0 0 10px 10px;
+				.box-icon {
+					display: flex;
+					margin-bottom: 20px;
+				}
+				.titleh2 {
+					margin-bottom: 10px;
+				}
+				.titleh2,
+				.titleh4 {
+					text-align: center;
+				}
+			}
+		}
+	}
+	.section-portfolio {
+		padding: 60px 0 100px;
+		background-color: $darkBlue;
+		.container {
+			.section-title {
+				margin-bottom: 90px;
+			}
+			.tabs {
+				margin-bottom: 60px;
+				.linkMenu {
+					&.active {
+						color: $accentColor;
+						&::before {
+							opacity: 1;
+						}
+					}
+					&:after {
+						content: none;
+					}
+				}
+			}
+			.tab-content {
+				display: flex;
+				align-items: stretch;
+				justify-content: space-between;
+				flex-flow: row wrap;
+				gap: 20px;
+				.project-cart {
+					border-radius: 8px;
+					width: calc(33.33% - 13.33px);
+					position: relative;
+					display: flex;
+					&:hover {
+						.bottom-cart {
+							opacity: 1;
+						}
+					}
+					.bottom-cart {
+						opacity: 0;
+						display: flex;
+						align-items: center;
+						position: absolute;
+						left: 0;
+						gap: 20px;
+						right: 0;
+						bottom: 0;
+						transition: 0.5s all;
+						background-color: rgba(6, 9, 34, 0.7);
+						.box-icon {
+							background-color: $accentColor;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 70px;
+							height: 70px;
+							border-radius: 0 0 0 8px;
+						}
+					}
+					img {
+						width: 100%;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+	.section-clients-around {
+		padding: 100px 0 90px;
+		background-color: $accentColor;
+		.container {
+			.titleh3 {
+				text-align: center;
+				margin-bottom: 100px;
+			}
+			.content {
+				display: flex;
+				align-items: stretch;
+				justify-content: space-between;
+				gap: 28px;
+				.trusted-cart {
+					background-color: $white;
+					border-radius: 12px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex: 1;
+					img {
+						max-width: 190px;
+						width: 100%;
+						border-radius: 12px;
+					}
+				}
+			}
+		}
+	}
+	.section-pricing {
+		padding: 180px 0 60px;
+		background-color: $darkBlue;
+		.container {
+			.section-title {
+				margin-bottom: 100px;
+			}
+			.sub-title {
+				margin-bottom: 10px;
+			}
+			.content-price {
+				display: flex;
+				align-items: stretch;
+				justify-content: space-between;
+				gap: 22px;
+				.price-item {
+					flex: 1;
+					border-radius: 10px 10px 0 0;
+					padding: 60px 22px 32px;
+					text-align: center;
+					border: 1px solid $accentColor;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					&.most-popular {
+						background-color: $accentColor;
+						position: relative;
+						overflow: hidden;
+						.label {
+							transform: rotate(45deg);
+							background-color: $white;
+							position: absolute;
+							right: -50px;
+							top: 50px;
+							z-index: 10;
+							height: 27px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 215px;
+							p {
+								font-size: 16px;
+								font-family: $JostBold;
+								line-height: 23.12px;
+								color: $accentColor;
+							}
+						}
+						.button {
+							color: $white;
+							border-color: $white;
+						}
+						.line {
+							background-color: $white;
+						}
+						.name-project {
+							color: $white;
+						}
+					}
+					.box-icon {
+						display: flex;
+						margin-bottom: 35px;
+					}
+					.titleh4 {
+						margin-bottom: 30px;
+					}
+					.titleh2 {
+						margin-bottom: 20px;
+					}
+					.name-project {
+						margin-bottom: 20px;
+						font-family: $JostMediumItalic;
+					}
+					.line {
+						height: 3px;
+						width: 130px;
+						background-color: $accentColor;
+						margin-bottom: 35px;
+					}
+					.text {
+						margin-bottom: 30px;
+						color: $white;
+					}
+					.button {
+						margin-top: 70px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.section-blog {
+		padding: 53px 0 80px;
+		background-image: url('../img/bg-testimonials.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		.container {
+			.titleh6 {
+				margin-bottom: 19px;
+				margin: 0 auto;
+			}
+			.titleh2 {
+				text-align: center;
+				margin-bottom: 100px;
+			}
+			.slider-testimonials {
+				width: 100%;
+				// padding: 0 148px;
+				.swiper-wrapper {
+					.swiper-slide {
+						width: 100% !important;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						.avatar {
+							display: flex;
+							margin-bottom: 40px;
+						}
+						.text-italic {
+							color: $white;
+							width: 740px;
+							text-align: center;
+							font-size: 24px;
+							font-family: $JostMediumItalic;
+							font-weight: 500;
+							line-height: 34.68px;
+							margin-bottom: 40px;
+						}
+						.text {
+							color: $white;
+							text-align: center;
+							font-size: 20px;
+							font-family: $JostMedium;
+							font-weight: 500;
+							line-height: 28.9px;
+							margin-bottom: 6px;
+						}
+						*:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				.swiper-button-prev,
+				.swiper-button-next {
+					width: 52px;
+					height: 52px;
+					background-color: rgba(255, 255, 255, 0.22);
+					border-radius: 4px;
+					&:after {
+						font-size: 20px;
+						color: $white;
+					}
+				}
+				.swiper-button-prev {
+					left: 148px;
+				}
+				.swiper-button-next {
+					right: 148px;
+				}
+			}
+		}
+	}
+	.section-contact {
+		padding: 64px 0;
+		background-color: $darkBlue;
+		.container {
+			.section-title {
+				margin-bottom: 60px;
+			}
+			.wrapper-news-cart {
+				display: flex;
+				align-items: stretch;
+				gap: 28px;
+				justify-content: space-between;
+				.news-cart {
+					flex: 1;
+					.top-cart {
+						border-radius: 8px 8px 0 0;
+						display: flex;
+						img {
+							width: 100%;
+						}
+					}
+					.bottom-cart {
+						padding: 18px;
+						border-radius: 0 0 8px 8px;
+						background-color: rgba(6, 34, 65, 0.8);
+						display: flex;
+						flex-direction: column;
+						gap: 18px;
+						.row-item {
+							display: flex;
+							align-items: center;
+							.line {
+								display: block;
+								height: 18px;
+								width: 1px;
+								background-color: $white;
+								margin: 0 9px;
+							}
+							img {
+								margin-right: 4px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $desktop) {
+	#main {
+		.section-blog {
+			.container {
+				.slider-testimonials {
+					.swiper-button-next {
+						right: 0;
+					}
+					.swiper-button-prev {
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $laptop) {
+	#main {
+		.section-pricing {
+			.container {
+				.content-price {
+					.price-item {
+						.text {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	#main {
+		.section-home {
+			padding-top: 94px;
+			.container {
+				.left-block {
+					flex: 1;
+					.text {
+						width: auto;
+					}
+				}
+				.right-block {
+					width: auto;
+					flex: 1;
+				}
+			}
+		}
+		.section-about-us {
+			padding: 60px 0;
+			.container {
+				.left-block {
+					flex: 1;
+					.sub-title {
+						width: auto;
+						margin-bottom: 50px;
+					}
+					.ceo-founder {
+						bottom: -20px;
+						left: 100%;
+						right: auto;
+					}
+				}
+			}
+		}
+		.section-why-choose-us {
+			padding: 60px 0;
+			.container {
+				.left-block {
+					width: auto;
+					flex: 1;
+				}
+				.right-block {
+					.row-item {
+						gap: 10px;
+						.titleh2 {
+							width: 65px;
+						}
+					}
+
+					.sub-title {
+						width: auto;
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
+		.section-services {
+			padding: 60px 0;
+		}
+		.section-experience {
+			padding: 60px 0;
+			.container {
+				gap: 20px;
+			}
+		}
+		.section-portfolio {
+			.container {
+				.tabs {
+					margin-bottom: 50px;
+				}
+			}
+		}
+		.section-pricing {
+			padding: 60px 0;
+			.container {
+				.section-title {
+					margin-bottom: 50px;
+				}
+			}
+		}
+		.section-pricing {
+			.container {
+				.content-price {
+					flex-flow: row wrap;
+					gap: 20px;
+					.price-item {
+						width: calc(50% - 10px);
+						padding: 20px;
+						flex: initial;
+					}
+				}
+			}
+		}
+		.section-blog {
+			.container {
+				.titleh2 {
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile1) {
+	#main {
+		.section-home {
+			padding-top: 154px;
+			.container {
+				gap: 94px 20px;
+				flex-direction: column;
+				.left-block {
+					.buttons {
+						gap: 20px;
+					}
+				}
+			}
+		}
+		.section-about-us {
+			.container {
+				flex-direction: column-reverse;
+				gap: 48px;
+
+				.left-block {
+					width: auto;
+					.founder-items {
+						margin-bottom: 50px;
+						gap: 50px 10px;
+						.item {
+							width: calc(50% - 5px);
+							.box-icon {
+								width: 49px;
+								height: 49px;
+								svg {
+									width: 33px;
+									height: 33px;
+								}
+							}
+						}
+					}
+					.bottom-content {
+						.ceo-founder {
+							left: auto;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+		.section-why-choose-us {
+			.container {
+				flex-direction: column;
+				gap: 48px;
+				.right-block {
+					.row-item {
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
+		.section-experience {
+			.container {
+				flex-flow: row wrap;
+				.experience-cart {
+					flex: initial;
+					width: calc(50% - 10px);
+					padding: 24px 20px 35px;
+					.box-icon {
+						width: 56px;
+						img {
+							width: 100%;
+						}
+					}
+					.titleh2 {
+						font-size: 36px;
+						line-height: 52px;
+					}
+					.titleh4 {
+						font-family: $JostRegular;
+						font-weight: 400;
+						font-size: 20px;
+						line-height: 29px;
+					}
+				}
+			}
+		}
+		.section-contact {
+			.container {
+				.wrapper-news-cart {
+					flex-direction: column;
+					align-items: center;
+					.news-cart {
+						width: 100%;
+						max-width: 400px;
+					}
+				}
+			}
+		}
+		.section-services {
+			.container {
+				.sub-title {
+					width: auto;
+				}
+				.service-carts {
+					gap: 20px;
+					.service-cart {
+						width: calc(50% - 10px);
+						.service-icon {
+							svg {
+								width: 55px;
+								height: 55px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.section-portfolio {
+			padding: 60px 0;
+			.container {
+				.section-title {
+					margin-bottom: 50px;
+				}
+				.tab-content {
+					.project-cart {
+						.bottom-cart {
+							.box-icon {
+								width: 50px;
+								height: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.section-clients-around {
+			padding: 60px 0;
+			.container {
+				.titleh3 {
+					margin-bottom: 50px;
+				}
+				.content {
+					gap: 15px;
+					flex-flow: row wrap;
+					.trusted-cart {
+						width: calc(33.33% - 10px);
+						flex: initial;
+					}
+				}
+			}
+		}
+		.section-pricing {
+			.container {
+				.content-price {
+					.price-item {
+						.button {
+							margin-top: 30px;
+						}
+						&.most-popular {
+							.label {
+								right: -65px;
+								top: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.section-blog {
+			padding: 50px 0 60px;
+			.container {
+				.slider-testimonials {
+					.swiper-button-next,
+					.swiper-button-prev {
+						width: 40px;
+						height: 40px;
+						&:after {
+							font-size: 15px;
+						}
+					}
+					.swiper-wrapper {
+						.swiper-slide {
+							.text-italic {
+								width: 250px;
+								font-size: 15px;
+								line-height: 22px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile2) {
+	#main {
+		.section-services {
+			padding: 48px 0;
+			.container {
+				.section-title {
+					margin-bottom: 30px;
+				}
+				.service-carts {
+					.service-cart {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.section-about-us {
+			padding: 48px 0;
+			.container {
+				.left-block {
+					.founder-items {
+						.item {
+							width: 100%;
+						}
+					}
+					.bottom-content {
+						.ceo-founder {
+							width: 140px;
+							.ceo-image {
+								img {
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.section-why-choose-us {
+			padding: 48px 0;
+			.container {
+				.right-block {
+					.row-item {
+						flex-direction: column;
+						.titleh2 {
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+		.section-experience {
+			padding: 48px 0;
+			.container {
+				.experience-cart {
+					width: 100%;
+				}
+			}
+		}
+		.section-portfolio {
+			padding: 48px 0;
+			.container {
+				.tabs {
+					display: flex;
+					justify-content: center;
+					flex-flow: row wrap;
+				}
+				.tab-content {
+					.project-cart {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.section-clients-around {
+			padding: 48px 0;
+			.container {
+				.content {
+					.trusted-cart {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.section-pricing {
+			padding: 48px 0;
+			.container {
+				.content-price {
+					.price-item {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.section-blog {
+			padding: 48px 0;
+		}
+		.section-contact {
+			padding: 48px 0;
+		}
+	}
+}

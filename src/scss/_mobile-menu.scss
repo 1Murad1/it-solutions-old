@@ -3,12 +3,12 @@
 	opacity: 0;
 	z-index: -100;
 	right: 0;
-	top: 0;
+	top: 94px;
 	bottom: 0;
 	left: 0;
 	transition: 0.5s all;
 	align-items: stretch;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	background-color: rgba(0, 0, 0, 0.3);
 	display: none;
 	&.active {
@@ -19,11 +19,11 @@
 		}
 	}
 	.wrapper-menu {
-		background-color: $green;
-		padding: 100px 40px 30px;
-		width: max-content;
+		width: 233px;
+		background-color: $accentColor;
+		padding: 6px 20px 20px;
 		transition: 0.5s all;
-		transform: translateX(100%);
+		transform: translateX(-100%);
 		z-index: 200;
 		position: relative;
 		.close-icon {
@@ -36,11 +36,27 @@
 			flex-direction: column;
 			gap: 30px;
 			li {
-				text-align: center;
 				.linkMenu {
 					color: $white;
+					&.active {
+						&:before {
+							opacity: 1;
+						}
+					}
+					&::before {
+						background-color: $white;
+					}
+					&::after {
+						content: none;
+					}
 				}
 			}
 		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.mobile-menu {
+		display: flex;
 	}
 }

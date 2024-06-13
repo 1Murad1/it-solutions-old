@@ -1,4 +1,4 @@
-// @import 'fonts';
+@import 'fonts';
 @import 'variables';
 @import 'header';
 @import 'footer';
@@ -10,15 +10,15 @@
 }
 
 ::-webkit-scrollbar-track {
-	background: $darkGreen;
+	background: $darkBlue;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $green;
+	background: $accentColor;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: $green;
+	background: $accentColor;
 }
 
 ::selection {
@@ -51,16 +51,14 @@ select:focus {
 	padding: 0;
 	box-sizing: border-box;
 }
-//html
-html {
-}
 
 //body
 body {
-	position: relative;
-	font-family: $RobotoRegular;
+	overflow-x: hidden;
+	font-family: $JostRegular;
 	font-size: 18px;
-	line-height: 21.09px;
+	line-height: 26.01px;
+	color: $secondaryTextColor;
 }
 
 //picture
@@ -75,6 +73,7 @@ picture {
 
 //button
 button {
+	background: none;
 	cursor: pointer;
 	border: none;
 }
@@ -82,14 +81,43 @@ button {
 //lists
 ul {
 	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 a {
 	transition: 0.5s all;
 	display: inline-block;
 	text-decoration: none;
+}
+
+.section-title {
+	display: flex;
+	gap: 30px;
+	align-items: flex-end;
+	justify-content: space-between;
+	.titles {
+		.title-overlay {
+			margin-bottom: 18px;
+		}
+	}
+}
+
+.color-accent {
+	color: $accentColor;
+	display: inline-block;
+	line-height: 64px;
+	border-bottom: 3px solid $accentColor;
+	@media screen and (max-width: $mobile1) {
+		line-height: 40px;
+	}
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	.social-link {
+		display: flex;
+	}
 }
 
 //preloader
@@ -107,10 +135,10 @@ a {
 	&__loader {
 		width: 75px;
 		height: 75px;
-		border: 10px solid $darkGreen;
+		border: 10px solid $darkBlue;
 		position: absolute;
 		border-radius: 50%;
-		border-top-color: $green;
+		border-top-color: $accentColor;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
@@ -137,7 +165,7 @@ a {
 	height: 50px;
 	border: none;
 	border-radius: 50%;
-	background-color: $green;
+	background-color: $accentColor;
 	outline: none;
 	cursor: pointer;
 	position: fixed;
@@ -152,8 +180,25 @@ a {
 		width: 20px;
 	}
 	&:hover {
-		background-color: $darkGreen;
+		background-color: $darkBlue;
 	}
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+	font-family: $JostBold;
+	color: $white;
+}
+
+.logo-header {
+	@include logoHeader;
+}
+
+.logo-footer {
+	@include logoFooter;
 }
 
 //titles
@@ -169,53 +214,111 @@ a {
 .titleh4 {
 	@include titleH4;
 }
+.titleh5 {
+	@include titleH5;
+}
+.titleh6 {
+	@include titleH6;
+}
 
 //link
 .linkMenu {
 	@include linkMenu;
 }
 
-.logo {
+.read-more {
+	@include readMore;
+}
+
+.link-footer,
+.address {
+	@include linkFooter;
 }
 
 .hidden {
 	display: none !important;
 }
 
+.title-overlay {
+	padding: 0 11px;
+	position: relative;
+	text-transform: uppercase;
+	width: max-content;
+	color: $accentColor;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		background-color: $accentColor;
+		top: 45%;
+		border-radius: 50%;
+		transform: translateY(-50%);
+	}
+	&::before {
+		left: 0;
+	}
+	&::after {
+		right: 0;
+	}
+}
+
 .button-form {
 	@include buttonForm;
 }
-.label-form {
-	display: flex;
-	align-items: center;
-	border-radius: 50px;
-	background-color: $grey;
-	position: relative;
-	& > .box-image-label {
-		display: flex;
-		position: absolute;
-		left: 20px;
-		top: 12px;
-		max-width: 32px;
-		img {
-			width: 100%;
-		}
-	}
 
-	input {
-		background-color: $grey;
-		@include input;
-	}
+.button-theme {
+	@include buttonTheme;
 }
+
+.button-search {
+	@include buttonSearch;
+}
+
+.button {
+	@include button;
+}
+
+.button-play {
+	@include buttonPlay;
+}
+
 //container
 .container {
 	margin: 0 auto;
-	max-width: 1140px;
+	max-width: 1424px;
 	width: 100%;
 }
 
-@media screen and (max-width: $laptop) {
+.input {
+	@include input;
+}
+
+.label-input {
+	display: flex;
+	align-items: stretch;
+}
+
+@media screen and (max-width: $desktop) {
 	.container {
 		max-width: calc(100% - 40px);
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	body {
+		font-size: 15px;
+		line-height: 21.68px;
+	}
+	.container {
+		max-width: calc(100% - 24px);
+	}
+}
+
+@media screen and (max-width: $mobile2) {
+	.section-title {
+		gap: 20px;
+		flex-flow: row wrap;
 	}
 }

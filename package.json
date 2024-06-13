@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp build --build",
-		"svgSprive": "gulp svgSprive"
+		"svgSpriteFunc": "gulp svgSpriteFunc"
 	},
 	"author": "FLS",
 	"license": "ISC",

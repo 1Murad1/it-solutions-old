@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
+import WOW from 'wow.js'
 
 // Проверка поддержки webp, добавление класса webp или no-webp для HTML
 export function isWebP() {
@@ -107,13 +108,22 @@ export function wowAnimationInit() {
 //mob-menu
 
 export function showMobMenu() {
-	const burgerButton = document.querySelector('.icon-mobile')
-	const closeButton = document.querySelector('.close-icon')
-	const mobMenu = document.querySelector('.mob-menu')
-	burgerButton?.addEventListener('click', e => {
-		mobMenu?.classList.add('active')
+	const buttonMob = document.querySelector('.button-mob')
+	const mobMenu = document.querySelector('.mobile-menu')
+	buttonMob?.addEventListener('click', e => {
+		e.currentTarget.classList.toggle('active')
+		mobMenu?.classList.toggle('active')
 	})
-	closeButton?.addEventListener('click', e => {
-		mobMenu?.classList.remove('active')
+}
+
+// slider initialization
+
+export function sliderTestimonials() {
+	const swiper = new Swiper('.slider-testimonials', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	})
 }
